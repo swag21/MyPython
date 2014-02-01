@@ -49,9 +49,33 @@
 # To satisfy the fifth goal:
 #		Continue from the fourth goal, but this time if you have enough bread and peanut butter but no jelly, print a message that tells you that you can make a peanut butter sandwich
 #		Or if you have more peanut butter and bread than jelly, that you can make a certain number of peanut butter & jelly sandwiches and a certain number of peanut butter sandwiches
-bread_count = 3;
-peanutButterSpead_count = 6;
-jelly_count = 24;
+
+# --------------------------------------------------------------------------------
+
+#define variables
+bread_count = raw_input("What is the bread count:");
+peanutButterSpead_count = raw_input("What is the peanut butter:");
+jelly_count = raw_input("What is the jelly count:");
+
+
+#convert string to int
+try:
+    bread_count = int(bread_count)
+except ValueError:
+    bread_count = 0
+
+
+try:
+    peanutButterSpead_count = int(peanutButterSpead_count)
+except ValueError:
+    peanutButterSpead_count = 0
+
+try:
+    jelly_count = int(jelly_count)
+except ValueError:
+    jelly_count = 0
+
+print"\n -----------RESULT PB&J sandwiches ----------------";
 
 if (bread_count > 0 and (bread_count % 2)  == 0):
      print "Have even amount of bread";
